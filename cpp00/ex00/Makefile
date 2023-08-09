@@ -30,7 +30,6 @@ OBJ_DIR		:= ./
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@ mkdir -p $(OBJ_DIR)
 	@ $(CC) $(FLAGS) $(INC) -c $< -o $@
 	@ printf "$(YELLOW)$<$(CLR_RMV)... "
 
@@ -57,8 +56,7 @@ run:
 	@ ./$(NAME)
 
 clean:
-	@ $(RM) *.o */*.o */*/*.o
-	@ $(RM) -r $(OBJ_DIR)
+	@ $(RM) *.o
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean: clean
