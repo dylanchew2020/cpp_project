@@ -7,9 +7,9 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= megaphone
+NAME		:= phonebook
 CC			:= g++
-FLAGS		:= -Wall -Wextra -Werror -std=c++98
+FLAGS		:= -Wall -Wextra -Werror -std=c++98 -g
 
 ################################################################################
 #                               PROGRAM'S INCLUDES                             #
@@ -24,7 +24,9 @@ INC			= -I./$(INC_DIR)
 
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
-					megaphone)
+					main \
+					PhoneBook \
+					Contact)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
@@ -56,7 +58,7 @@ run:
 	@ ./$(NAME)
 
 clean:
-	@ $(RM) $(OBJ_DIR)/*.o
+	@ $(RM) *.o
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean: clean
