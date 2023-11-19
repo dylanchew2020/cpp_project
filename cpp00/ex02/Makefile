@@ -8,8 +8,8 @@
 ################################################################################
 
 NAME		:= Account
-CC			:= g++
-FLAGS		:= -Wall -Wextra -Werror -std=c++98 -g
+CC			:= clang++
+FLAGS		:= -std=c++98 -g -fcolor-diagnostics #-Wall -Wextra -Werror
 
 ################################################################################
 #                               PROGRAM'S INCLUDES                             #
@@ -50,6 +50,7 @@ $(NAME): $(OBJ)
 	@ echo "\n$(GREEN)Compilation $(CLR_RMV)of $(BLUE) $(NAME) $(CLR_RMV)..."
 	@ $(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@ echo "$(GREEN)[Success] $(BLUE)$(NAME) $(CLR_RMV)created ✔️"
+	@ ./$(NAME) > Account.log
 
 all: $(NAME)
 
@@ -61,7 +62,7 @@ clean:
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean: clean
-	@ $(RM) $(NAME)
+	@ $(RM) $(NAME) Account.log
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)binary ✔️"
 
 re:			fclean all
