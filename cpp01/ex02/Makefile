@@ -7,7 +7,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= Zombie
+NAME		:= learnPTR_REF
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
 				-Wall -Wextra -Werror
@@ -26,10 +26,7 @@ INC			= -I./$(INC_DIR)
 
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
-					main \
-					Zombie \
-					newZombie \
-					randomChump)
+					main)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
