@@ -28,8 +28,7 @@ SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
 					Zombie \
-					newZombie \
-					randomChump)
+					zombieHorde)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)

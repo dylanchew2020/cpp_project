@@ -9,7 +9,7 @@
 
 NAME		:= Account
 CC			:= clang++
-FLAGS		:= -std=c++98 -g -fcolor-diagnostics #-Wall -Wextra -Werror
+FLAGS		:= -std=c++98 -g -fcolor-diagnostics -Wall -Wextra -Werror
 
 ################################################################################
 #                               PROGRAM'S INCLUDES                             #
@@ -31,7 +31,7 @@ OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@ $(CC) $(FLAGS) $(INC) -c $< -o $@
+	 $(CC) $(FLAGS) $(INC) -c $< -o $@
 	@ printf "$(YELLOW)$<$(CLR_RMV)... "
 
 ################################################################################
@@ -48,7 +48,7 @@ RM			:= rm -f
 
 $(NAME): $(OBJ)
 	@ echo "\n$(GREEN)Compilation $(CLR_RMV)of $(BLUE) $(NAME) $(CLR_RMV)..."
-	@ $(CC) $(FLAGS) $(OBJ) -o $(NAME)
+	 $(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@ echo "$(GREEN)[Success] $(BLUE)$(NAME) $(CLR_RMV)created ✔️"
 	@ ./$(NAME) > Account.log
 

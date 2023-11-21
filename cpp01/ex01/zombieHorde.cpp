@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.h                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dylanchew2020 <dylanchew2020@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 23:17:06 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/11/21 11:35:23 by dylanchew20      ###   ########.fr       */
+/*   Created: 2023/11/21 12:21:54 by dylanchew20       #+#    #+#             */
+/*   Updated: 2023/11/21 13:50:12 by dylanchew20      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
-
-#include <string>
 #include "Zombie.hpp"
 
-
-#endif
+Zombie* zombieHorde(int N, std::string name)
+{
+	Zombie* horde = new Zombie[N];
+	int i;
+	
+	i = 0;
+	while (i < N)
+		horde[i++].setName(name);
+	return (horde);
+}
