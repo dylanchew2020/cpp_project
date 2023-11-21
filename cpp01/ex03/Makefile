@@ -7,7 +7,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= Zombie
+NAME		:= unnecessaryViolence
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
 				-Wall -Wextra -Werror
@@ -27,9 +27,9 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					Zombie \
-					newZombie \
-					randomChump)
+					Weapon \
+					HumanA \
+					HumanB)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
