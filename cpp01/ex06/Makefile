@@ -7,7 +7,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= Zombie
+NAME		:= harlFilter
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
 				-Wall -Wextra -Werror
@@ -27,9 +27,7 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					Zombie \
-					newZombie \
-					randomChump)
+					Harl)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
@@ -54,7 +52,6 @@ $(NAME): $(OBJ)
 	@ echo "\n$(GREEN)Compilation $(CLR_RMV)of $(BLUE)$(NAME) $(CLR_RMV)..."
 	@ $(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@ echo "$(GREEN)[Success] $(BLUE)$(NAME) $(CLR_RMV)created ✔️"
-	@ ./$(NAME) > $(NAME).log
 
 all: $(NAME)
 
