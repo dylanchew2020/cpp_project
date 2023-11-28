@@ -7,10 +7,10 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= harlFilter
+NAME		:= fixed
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
-				-Wall -Wextra -Werror
+				#-Wall -Wextra -Werror
 OUTPUT		:= $(NAME).log
 
 ################################################################################
@@ -27,7 +27,7 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					Harl)
+					Fixed)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
