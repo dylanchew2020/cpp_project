@@ -10,8 +10,8 @@
 NAME		:= fixed
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
-				#-Wall -Wextra -Werror
-OUTPUT		:= $(NAME).log
+				-Wall -Wextra -Werror
+OUTPUT		:= $(NAME).out
 
 ################################################################################
 #                               PROGRAM'S INCLUDES                             #
@@ -52,6 +52,7 @@ $(NAME): $(OBJ)
 	@ echo "\n$(GREEN)Compilation $(CLR_RMV)of $(BLUE)$(NAME) $(CLR_RMV)..."
 	@ $(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@ echo "$(GREEN)[Success] $(BLUE)$(NAME) $(CLR_RMV)created ✔️"
+	@ ./$(NAME) > $(OUTPUT) && diff -y $(OUTPUT) sample.output
 
 all: $(NAME)
 
