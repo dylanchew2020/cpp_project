@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 20:00:52 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/11/29 21:57:00 by lchew            ###   ########.fr       */
+/*   Updated: 2023/11/30 15:10:30 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ class Fixed
 		Fixed(const float value);
 		~Fixed(void);
 		Fixed(const Fixed &fixed);
-		Fixed&			operator=(const Fixed& other);
+		Fixed&					operator=(const Fixed& other);
 		friend std::ostream&	operator<<(std::ostream& os, const Fixed& fixed);
 		
 		int		getRawBits(void) const;
 		void	setRawBits( int const raw );
 		
-		float toFloat(void) const;
-		int toInt(void) const;
+		float	toFloat(void) const;
+		int 	toInt(void) const;
 		
 		private:
 			int _fpvalue;

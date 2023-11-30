@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 20:00:58 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/11/29 22:03:37 by lchew            ###   ########.fr       */
+/*   Updated: 2023/11/30 15:10:04 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Fixed::Fixed(const int value) : _fpvalue(0)
 Fixed::Fixed(const float value) : _fpvalue(0)
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->_fpvalue = value * (1 << this->_fracbits);
+	this->_fpvalue = roundf(value * (1 << this->_fracbits));
 }
 
 Fixed::Fixed(const Fixed& fixed)
@@ -54,7 +54,12 @@ std::ostream&	operator<<(std::ostream& os, const Fixed& fixed)
 
 float Fixed::toFloat(void) const
 {
-	return ((float)this->_fpvalue / (float)(1 << this->_fracbits));
+	return (static_cast<float>((this->_fpvalue) / static_cast<float>((1 << this->_fracbits))));
+}
+
+int Fixed::toInt(void) const
+{
+	return (this->_fpvalue >> this->_fracbits);
 }
 
 Fixed::~Fixed(void)
