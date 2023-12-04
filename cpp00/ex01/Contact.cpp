@@ -12,6 +12,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "Contact.hpp"
 
 Contact::Contact(void)
@@ -31,9 +32,10 @@ Contact::~Contact(void)
 
 void	Contact::setFirstName(void)
 {
+	this->_firstName.clear();
 	while (this->_firstName.empty())
 	{
-		std::cout << "Enter first name: ";
+		std::cout << std::setw(20) << std::left << "Enter First Name" << ": ";
 		std::getline(std::cin, this->_firstName);
 		if (this->_firstName.empty())
 			std::cout << "This field cannot be left empty" << std::endl;
@@ -43,9 +45,10 @@ void	Contact::setFirstName(void)
 
 void	Contact::setLastName(void)
 {
+	this->_lastName.clear();
 	while (this->_lastName.empty())
 	{
-		std::cout << "Enter last name: ";
+		std::cout << std::setw(20) << std::left << "Enter Last Name" << ": ";
 		std::getline(std::cin, this->_lastName);
 		if (this->_lastName.empty())
 			std::cout << "This field cannot be left empty" << std::endl;
@@ -55,9 +58,10 @@ void	Contact::setLastName(void)
 
 void	Contact::setNickname(void)
 {
+	this->_nickname.clear();
 	while (this->_nickname.empty())
 	{
-		std::cout << "Enter nickname: ";
+		std::cout << std::setw(20) << std::left << "Enter Nickname" << ": ";
 		std::getline(std::cin, this->_nickname);
 		if (this->_nickname.empty())
 			std::cout << "This field cannot be left empty" << std::endl;
@@ -67,9 +71,10 @@ void	Contact::setNickname(void)
 
 void	Contact::setPhoneNumber(void)
 {
+	this->_phoneNumber.clear();
 	while (this->_phoneNumber.empty())
 	{
-		std::cout << "Enter phone number: ";
+		std::cout << std::setw(20) << std::left << "Enter Phone Number" << ": ";
 		std::getline(std::cin, this->_phoneNumber);
 		if (this->_phoneNumber.empty())
 			std::cout << "This field cannot be left empty" << std::endl;
@@ -79,9 +84,10 @@ void	Contact::setPhoneNumber(void)
 
 void	Contact::setDarkestSecret(void)
 {
+	this->_darkestSecret.clear();
 	while (this->_darkestSecret.empty())
 	{
-		std::cout << "Enter Darkest Secret: ";
+		std::cout << std::setw(20) << std::left << "Enter Darkest Secret" << ": ";
 		std::getline(std::cin, this->_darkestSecret);
 		if (this->_darkestSecret.empty())
 			std::cout << "This field cannot be left empty" << std::endl;
