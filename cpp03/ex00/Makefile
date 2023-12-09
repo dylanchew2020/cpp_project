@@ -7,7 +7,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= bsp
+NAME		:= claptrap
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
 				-Wall -Wextra -Werror
