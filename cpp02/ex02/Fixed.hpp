@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 20:00:52 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/11/30 23:13:11 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/09 18:54:40 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Fixed
 		
 		/* OPERATOR OVERLOAD */
 		Fixed&					operator=(const Fixed& fixed);
-		friend std::ostream&	operator<<(std::ostream& os, const Fixed& fixed);
 		bool					operator>(const Fixed& fixed) const;
 		bool					operator<(const Fixed& fixed) const;
 		bool					operator>=(const Fixed& fixed) const;
@@ -61,5 +60,7 @@ class Fixed
 			int _fpvalue;
 			static const int _fracbits;
 };
+
+std::ostream&	operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif

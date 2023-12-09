@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 20:00:48 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/12/09 18:37:56 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/09 18:57:59 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main( void )
 	Point a(0.0f, 0.0f);
 	Point b(5.0f, 0.0f);
 	Point c(0.0f, 5.0f);
-	Point point(2.0f, 2.0f);
+	Point point(5.0f, 5.0f);
 	
 	// // another set of points
 	// Point a(1.0f, 3.0f);
