@@ -27,9 +27,7 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					Fixed \
-					Point \
-					bsp)
+					ClapTrap)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
