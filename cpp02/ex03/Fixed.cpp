@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 20:00:58 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/11/30 23:26:59 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/09 16:44:07 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 const int Fixed::_fracbits = 8;
 
-Fixed::Fixed(void) : _fpvalue(0) {}
-Fixed::~Fixed(void) {}
+Fixed::Fixed(void) : _fpvalue(0) {
+	// std::cout << "Fixed default constructor called" << std::endl;
+}
+Fixed::~Fixed(void) {
+	// std::cout << "Fixed destructor called" << std::endl;
+}
 
 /* 
 	CONSTRUCTORS OVERLOADS
@@ -32,7 +36,9 @@ Fixed::~Fixed(void) {}
  *
  * @return 
  */
-Fixed::Fixed(const int value) : _fpvalue(value << this->_fracbits) {}
+Fixed::Fixed(const int value) : _fpvalue(value << this->_fracbits) {
+	// std::cout << "Fixed int constructor called" << std::endl;
+}
 
 /**
  * @brief Overloaded constructor that takes in a float value
@@ -50,7 +56,9 @@ Fixed::Fixed(const int value) : _fpvalue(value << this->_fracbits) {}
  *
  * @return 
  */
-Fixed::Fixed(const float value) : _fpvalue(roundf(value * (1 << this->_fracbits))) {}
+Fixed::Fixed(const float value) : _fpvalue(roundf(value * (1 << this->_fracbits))) {
+	// std::cout << "Fixed float constructor called" << std::endl;
+}
 
 /**
  * @brief Copy constructor
@@ -64,6 +72,7 @@ Fixed::Fixed(const float value) : _fpvalue(roundf(value * (1 << this->_fracbits)
  */
 Fixed::Fixed(const Fixed& fixed)
 {
+	// std::cout << "Fixed copy constructor called" << std::endl;
 	*this = fixed;
 }
 
