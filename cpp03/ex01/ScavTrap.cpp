@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 20:00:03 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/10 20:59:26 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/10 21:06:16 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ScavTrap::ScavTrap(string name) : ClapTrap(name)
 {
 	cout << endl << "ScavTrap name constructor called" << endl;
-	cout << "This object name is: " << this->getName() << endl;
+	cout << this->getName() << " evolved into a ScavTrap!" << endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& ScavTrap)

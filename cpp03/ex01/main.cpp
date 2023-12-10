@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 18:48:03 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/10 20:58:22 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/10 21:08:53 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ int	main(void)
 {
 	std::cout << "Creating ScavTrap 'Serena'" << std::endl;
     ScavTrap scav("Serena");
+
+    // Test Guard Gate Mode
+    std::cout << "\nTesting Guard Gate Mode:" << std::endl;
+    scav.guardGate();
 
     // Test attacking
     std::cout << "\nTesting Attack:" << std::endl;
@@ -55,9 +59,11 @@ int	main(void)
 	std::cout << "\nTesting Damage when Dead:" << std::endl;
 	scav.takeDamage(10);
 
-    // Test Guard Gate Mode
-    std::cout << "\nTesting Guard Gate Mode:" << std::endl;
-    scav.guardGate();
+    // Checking final stats
+    std::cout << "\nChecking Final Stats:" << std::endl;
+    cout << "hp: " << scav.getHitpoints() << endl;
+    cout << "energy: " << scav.getEnergyPoints() << endl;
+    cout << "attack: " << scav.getAttackDamage() << endl;
 
     // Test destruction
     std::cout << "\nDestroying ScavTrap 'Serena':" << std::endl;
