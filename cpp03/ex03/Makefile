@@ -70,6 +70,7 @@ clean:
 fclean: clean
 	@ $(RM) $(NAME) $(NAME).out
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)binary ✔️"
+	@ cclean
 
 re:			fclean all
 

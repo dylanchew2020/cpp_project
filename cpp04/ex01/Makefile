@@ -7,10 +7,10 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= claptrap
+NAME		:= animal
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
-				-Wall -Wextra -Werror
+				-Wall -Wextra -Werror -Wshadow
 OUTPUT		:= $(NAME).out
 
 ################################################################################
@@ -27,8 +27,8 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					ClapTrap \
-					ScavTrap)
+					
+					)
 
 OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
