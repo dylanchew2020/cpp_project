@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 18:48:13 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/10 20:59:04 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/11 20:04:51 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(void)
 	cout << endl << "ClapTrap default constructor called" << endl;
 }
 
-ClapTrap::ClapTrap(string name) : _name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20)
+ClapTrap::ClapTrap(string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
 	cout << endl << "ClapTrap name constructor called" << endl;
 	cout << "This object name is: " << this->_name << endl;

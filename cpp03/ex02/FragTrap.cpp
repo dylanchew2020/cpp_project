@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:05:25 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/11 14:37:14 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/11 20:00:30 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@ FragTrap::FragTrap(string name) : ClapTrap(name)
 {
 	cout << endl << "FragTrap name constructor called" << endl;
 	cout << this->getName() << " evolved into a FragTrap!" << endl;
+	cout << "Hitpoints before init:  " << this->getHitpoints() << endl;
+	cout << "EnergyPoints before init:  " << this->getEnergyPoints() << endl;
+	cout << "AttackDamage before init:  " << this->getAttackDamage() << endl;
+	this->setHitpoints(100);
+	this->setEnergyPoints(100);
+	this->setAttackDamage(30);
+	cout << "Hitpoints init:  " << this->getHitpoints() << endl;
+	cout << "EnergyPoints init:  " << this->getEnergyPoints() << endl;
+	cout << "AttackDamage init:  " << this->getAttackDamage() << endl;
 }
 
 FragTrap::FragTrap(const FragTrap& FragTrap)

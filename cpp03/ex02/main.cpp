@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 18:48:03 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/11 15:26:45 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/11 20:01:52 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,13 @@ int main(void)
 {    
     std::cout << "Creating ScavTrap 'Serena'" << std::endl;
     ScavTrap scav("Serena");
-
+    ClapTrap clap("Clap");
+    cout << "ClapTrap name: " << clap.getName() << endl;
+    cout << "ClapTrap hp: " << clap.getHitpoints() << endl;
+    cout << "ClapTrap energy: " << clap.getEnergyPoints() << endl;
+    cout << "ClapTrap attack: " << clap.getAttackDamage() << endl;
+    
+    
     // Test Guard Gate Mode
     std::cout << "\nTesting Guard Gate Mode:" << std::endl;
     scav.guardGate();

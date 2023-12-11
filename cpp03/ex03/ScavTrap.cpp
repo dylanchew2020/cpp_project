@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 20:00:03 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/11 18:47:12 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/11 20:05:51 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,15 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name)
 {
 	cout << endl << "ScavTrap name constructor called" << endl;
 	cout << this->getName() << " evolved into a ScavTrap!" << endl;
+	cout << "Hitpoints before init:  " << this->getHitpoints() << endl;
+	cout << "EnergyPoints before init:  " << this->getEnergyPoints() << endl;
+	cout << "AttackDamage before init:  " << this->getAttackDamage() << endl;
 	this->setHitpoints(100);
 	this->setEnergyPoints(50);
 	this->setAttackDamage(20);
+	cout << "Hitpoints init:  " << this->getHitpoints() << endl;
+	cout << "EnergyPoints init:  " << this->getEnergyPoints() << endl;
+	cout << "AttackDamage init:  " << this->getAttackDamage() << endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& ScavTrap)
