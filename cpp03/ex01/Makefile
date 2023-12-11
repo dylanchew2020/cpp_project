@@ -67,7 +67,8 @@ clean:
 fclean: clean
 	@ $(RM) $(NAME) $(NAME).out
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)binary ✔️"
-	@ cclean
+	@ bash ~/Cleaner_42/Cleaner_42.sh
+
 
 re:			fclean all
 
