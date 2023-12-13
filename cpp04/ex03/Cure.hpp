@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 20:35:48 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 21:46:57 by lchew            ###   ########.fr       */
+/*   Created: 2023/12/13 19:33:26 by lchew             #+#    #+#             */
+/*   Updated: 2023/12/13 21:48:50 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef CURE_HPP
+# define CURE_HPP
 
-int main()
+#include "AMateria.hpp"
+
+class Cure : public AMateria
 {
-	A_Animal* animal = new Dog();
-	
-	animal->makeSound();
-	
-	return (0);
-}
+	public:
+		Cure(void);
+		Cure(const Cure& materia);
+		~Cure(void);
+		
+		Cure& operator=(const Cure& materia);
+		AMateria* clone(void) const;
+		void use(ICharacter& target);
+};
+
+#endif

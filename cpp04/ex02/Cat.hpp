@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:59:39 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 16:05:04 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/13 21:46:17 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cat : public Animal
 		~Cat(void);
 		
 		Cat& operator=(const Cat& cat);
-		void makeSound (void) const override;
+		void makeSound (void) const;
 };
 
 #endif

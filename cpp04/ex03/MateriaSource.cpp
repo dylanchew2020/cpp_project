@@ -1,23 +1,20 @@
+#include "MateriaSource.hpp"
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 20:35:48 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 21:46:57 by lchew            ###   ########.fr       */
+/*   Created: 2023/12/13 19:31:20 by lchew             #+#    #+#             */
+/*   Updated: 2023/12/13 19:31:21 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#include "MateriaSource.hpp"
 
-int main()
+MateriaSource::MateriaSouce(void)
 {
-	A_Animal* animal = new Dog();
-	
-	animal->makeSound();
-	
-	return (0);
+	cout << "IMateriaSource constructor called" << endl;
 }
+

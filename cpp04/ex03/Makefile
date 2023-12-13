@@ -7,7 +7,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME		:= animal
+NAME		:= amateria
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
 				-Wall -Wextra -Werror -Wshadow
@@ -27,7 +27,11 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					
+					AMateria \
+					Character \
+					MateriaSource \
+					Ice \
+					Cure \
 					)
 
 OBJ_DIR		:= .

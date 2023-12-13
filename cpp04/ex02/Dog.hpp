@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:47:34 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 16:06:52 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/13 21:46:24 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Dog : public Animal
 		~Dog(void);
 		
 		Dog& operator=(const Dog& dog);
-		void makeSound(void) const override;
+		void makeSound(void) const;
 		void angryDog(void) const;
 };	
 

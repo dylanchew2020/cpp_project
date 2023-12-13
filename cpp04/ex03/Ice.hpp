@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 20:35:48 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 21:46:57 by lchew            ###   ########.fr       */
+/*   Created: 2023/12/13 19:33:20 by lchew             #+#    #+#             */
+/*   Updated: 2023/12/13 21:48:42 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef ICE_HPP
+# define ICE_HPP
 
-int main()
+#include "AMateria.hpp"
+
+class Ice : public AMateria
 {
-	A_Animal* animal = new Dog();
-	
-	animal->makeSound();
-	
-	return (0);
-}
+	public:
+		Ice(void);
+		Ice(const Ice& materia);
+		~Ice(void);
+		
+		Ice& operator=(const Ice& materia);
+		AMateria* clone(void) const;
+		void use(ICharacter& target);
+};
+
+#endif
