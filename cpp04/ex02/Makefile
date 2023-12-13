@@ -27,7 +27,10 @@ INC			= -I./$(INC_DIR)
 SRC_DIR		:= .
 SRC			:= $(addsuffix .cpp, \
 					main \
-					
+					Animal \
+					Dog \
+					Cat \
+					Brain \
 					)
 
 OBJ_DIR		:= .
@@ -67,7 +70,7 @@ clean:
 fclean: clean
 	@ $(RM) $(NAME) $(NAME).out
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)binary ✔️"
-	@ cclean
+	@ bash ~/Cleaner_42/Cleaner_42.sh
 
 re:			fclean all
 
