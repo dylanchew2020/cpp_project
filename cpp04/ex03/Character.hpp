@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 19:22:17 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 22:20:05 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/14 13:26:23 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-# define MAX_SLOT 4
+# define MAX_C_SLOT 4
 
 class ICharacter
 {
@@ -37,7 +37,7 @@ class Character : public ICharacter
 {
 	private:
 		string _name;
-		AMateria* _slot[MAX_SLOT];
+		AMateria* _slot[MAX_C_SLOT];
 		
 	public:
 		Character(void);
@@ -47,9 +47,10 @@ class Character : public ICharacter
 		
 		Character& operator=(const Character& i);
 		const string& getName(void) const;
+		AMateria* getSlot(int idx) const;
 		void equip(AMateria* m);
 		void unequip(int idx);
-		void use(int idx, Character& target);
-}
+		void use(int idx, ICharacter& target);
+};
 
 #endif

@@ -9,8 +9,9 @@
 
 NAME		:= amateria
 CC			:= clang++
-FLAGS		:= -std=c++98 -g -fcolor-diagnostics -fsanitize=address \
-				-Wall -Wextra -Werror -Wshadow
+FLAGS		:= -std=c++98 -g -fcolor-diagnostics \
+				-Wall -Wextra -Werror -Wshadow \
+				# -fsanitize=address
 OUTPUT		:= $(NAME).out
 
 ################################################################################
@@ -71,7 +72,7 @@ clean:
 fclean: clean
 	@ $(RM) $(NAME) $(NAME).out
 	@ echo "$(RED)Deleting $(BLUE)$(NAME) $(CLR_RMV)binary ✔️"
-	@ cclean
+	@ bash ~/Cleaner_42/Cleaner_42.sh
 
 re:			fclean all
 

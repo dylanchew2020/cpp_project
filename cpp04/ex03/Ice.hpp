@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 19:33:20 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 21:48:42 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/14 11:17:59 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Ice : public AMateria
 		~Ice(void);
 		
 		Ice& operator=(const Ice& materia);
+		
 		AMateria* clone(void) const;
 		void use(ICharacter& target);
 };

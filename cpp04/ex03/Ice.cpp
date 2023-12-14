@@ -6,27 +6,28 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 19:33:07 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 20:53:46 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/14 12:53:13 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "Character.hpp"
 
 Ice::Ice(void)
 {
 	_type = "ice";
-	cout << "Ice constructor called" << endl;
+	// cout << "Ice constructor called" << endl;
 }
 
 Ice::Ice(const Ice& materia)
 {
 	*this = materia;
-	cout << "Ice copy constructor called" << endl;
+	// cout << "Ice copy constructor called" << endl;
 }
 
 Ice::~Ice(void)
 {
-	cout << "Ice destructor called" << endl;
+	// cout << "Ice destructor called" << endl;
 }
 
 Ice& Ice::operator=(const Ice& materia)
@@ -35,7 +36,7 @@ Ice& Ice::operator=(const Ice& materia)
 	{
 		this->_type = materia._type;
 	}
-	cout << "Ice assignation operator called" << endl;
+	// cout << "Ice assignation operator called" << endl;
 	return (*this);
 }
 
