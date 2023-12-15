@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dylanchew2020 <dylanchew2020@student.42    +#+  +:+       +#+        */
+/*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 13:59:37 by dylanchew20       #+#    #+#             */
-/*   Updated: 2023/11/21 14:19:27 by dylanchew20      ###   ########.fr       */
+/*   Updated: 2023/12/14 17:22:35 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int main(void)
 	std::string str = "HI THIS IS BRAIN";
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
+	std::string stringREF2 = str;
 
 	std::cout << &str << std::endl;
 	std::cout << stringPTR << std::endl;
 	std::cout << &stringREF << std::endl;
+	std::cout << &stringREF2 << std::endl;
 
 	std::cout << str << std::endl;
 	std::cout << *stringPTR << std::endl;

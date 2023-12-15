@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:36:01 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/11 21:29:23 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/14 13:51:55 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ using std::string;
 
 class Animal
 {
+	protected:
+		string _type;
+		
 	public:
 		Animal(void);
 		Animal(const Animal& animal);
@@ -32,9 +35,6 @@ class Animal
 		string getType(void) const;
 		
 		virtual void makeSound(void) const;
-	
-	protected:
-		string _type;	
 };
 
 #endif

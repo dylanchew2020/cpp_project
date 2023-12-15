@@ -5,12 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 20:36:01 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 16:01:40 by lchew            ###   ########.fr       */
+/*   Created: 2023/12/13 16:01:40 by lchew             #+#    #+#             */
+/*   Updated: 2023/12/15 17:40:36 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
 #include <iostream>
@@ -36,7 +35,6 @@ typedef class Animal
 	
 	protected:
 		string _type;
-		Brain *_brain;
 } A_Animal;
 
 #endif

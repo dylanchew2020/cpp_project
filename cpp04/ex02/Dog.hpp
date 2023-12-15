@@ -6,7 +6,7 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 20:47:34 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/13 21:46:24 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/15 17:40:58 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 
 class Dog : public Animal
 {
+	private:
+		Brain *_brain;
+		
 	public:
 		Dog(void);
 		Dog(const Dog& dog);
