@@ -10,6 +10,8 @@
 NAME		:= Account
 CC			:= clang++
 FLAGS		:= -std=c++98 -g -fcolor-diagnostics -Wall -Wextra -Werror
+OUTPUT		:= Account.log
+
 
 ################################################################################
 #                               PROGRAM'S INCLUDES                             #
@@ -31,7 +33,7 @@ OBJ_DIR		:= .
 OBJ			:= $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	 $(CC) $(FLAGS) $(INC) -c $< -o $@
+	@ $(CC) $(FLAGS) $(INC) -c $< -o $@
 	@ printf "$(YELLOW)$<$(CLR_RMV)... "
 
 ################################################################################
@@ -48,9 +50,13 @@ RM			:= rm -f
 
 $(NAME): $(OBJ)
 	@ echo "\n$(GREEN)Compilation $(CLR_RMV)of $(BLUE) $(NAME) $(CLR_RMV)..."
-	 $(CC) $(FLAGS) $(OBJ) -o $(NAME)
+	@ $(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@ echo "$(GREEN)[Success] $(BLUE)$(NAME) $(CLR_RMV)created ✔️"
-	@ ./$(NAME) > Account.log
+	@ ./$(NAME) > $(OUTPUT)
+	@ cut -c 19- Account.log > tmp_account.log
+	@ cut -c 19- 19920104_091532.log > tmp_19920104_091532.log
+	@ diff tmp_account.log tmp_19920104_091532.log || true
+	@ rm -f tmp_account.log tmp_19920104_091532.log
 
 all: $(NAME)
 
