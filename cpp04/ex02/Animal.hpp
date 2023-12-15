@@ -6,10 +6,11 @@
 /*   By: lchew <lchew@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 16:01:40 by lchew             #+#    #+#             */
-/*   Updated: 2023/12/15 17:40:36 by lchew            ###   ########.fr       */
+/*   Updated: 2023/12/15 17:43:57 by lchew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
 #include <iostream>
@@ -20,7 +21,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
-typedef class Animal
+class Animal
 {
 	public:
 		Animal(void);
@@ -35,6 +36,6 @@ typedef class Animal
 	
 	protected:
 		string _type;
-} A_Animal;
+};
 
 #endif
